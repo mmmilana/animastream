@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimaStream - Agenzia di sviluppo e animazione</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #a3e0f4 0%, #b8f8fc 100%); /* lighter background */
+        }
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        @keyframes logoBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .logo-animate {
+            animation: logoBounce 3s infinite ease-in-out;
+            filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
+        }
+        .highlight-text {
+            background: rgba(255, 255, 255, 0.5);
+            color: #003d52;
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+        .btn-small {
+            padding: 5px 12px; /* Reduced padding further */
+            font-size: 0.95rem;   /* Adjusted font size */
+            background: #ff9900; /* Complementary color for buttons */
+            color: white;
+            border: 2px solid #ff9900;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .btn-small:hover {
+            background: #e68000; /* Darker shade on hover */
+            color: white;
+            transform: scale(1.1); /* Subtle enlarge effect */
+        }
+        .btn-small.purple {
+            background: #9b59b6; /* Complementary color for Pitch Bible */
+            border: 2px solid #9b59b6;
+        }
+        .btn-small.purple:hover {
+            background: #8e44ad; /* Darker shade for Pitch Bible */
+            transform: scale(1.1); /* Subtle enlarge effect */
+        }
+        @media (max-width: 768px) {
+            .text-4xl { font-size: 2rem; }
+            .p-10 { padding: 6px; }
+            .max-w-3xl { max-width: 90%; }
+        }
+        /* Fix: Center the "Sito in costruzione" text */
+        .construction-text {
+            width: 100%; /* Full-width */
+            background: rgba(255, 255, 255, 0.5);
+            color: #003d52;
+            text-align: center; /* Center text within the full width */
+            padding: 10px 0; /* Adjusted padding for better appearance */
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+            display: block; /* Ensure it spans full width */
+            position: absolute; /* Position it absolutely to avoid affecting layout */
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6 relative">
+    <!-- Full-width "Sito in costruzione" banner -->
+    <div class="construction-text" data-aos="zoom-in">
+        🚧 Sito in costruzione 🚧
+    </div>
+
+    <div class="glass-card max-w-3xl w-full p-10 m-4 mt-20" data-aos="fade-up">
+        <img src="logo.png" alt="AnimaStream Logo" class="mx-auto w-40 mb-6 logo-animate" data-aos="zoom-in">
+        <h1 class="text-4xl font-bold text-center text-blue-900 mb-4">AnimaStream</h1>
+        <p class="text-lg text-center text-gray-800 font-semibold mb-2">Agenzia di sviluppo e animazione</p>
+        <p class="text-md text-center text-gray-800 font-semibold mb-6">Scopri il nostro nuovo progetto educativo:</p>
+        <div class="flex justify-center space-x-4 mb-6">
+            <a href="https://www.canva.com/design/DAGfZ_DWDt4/jG-gAi4xy_H1f2TP4vQd9g/view?utm_content=DAGfZ_DWDt4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=heb9830c709" class="btn-small hover-scale font-bold py-2 px-4 rounded-lg transition duration-300 flex items-center shadow-lg" target="_blank">
+                <i class="fas fa-film mr-2"></i> Pitch Deck
+            </a>
+            <a href="https://www.canva.com/design/DAGfXj_XYts/uCQMMovWO5-TqLmrnAFQ2g/view?utm_content=DAGfXj_XYts&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6f037ac858" class="btn-small purple hover-scale font-bold py-2 px-4 rounded-lg transition duration-300 flex items-center shadow-lg" target="_blank">
+                <i class="fas fa-book mr-2"></i> Pitch Bible
+            </a>
+        </div>
+        <p class="text-center text-gray-600">
+            <a href="mailto:mila@coscientia.com" class="text-blue-800 font-semibold hover:underline transition duration-300">Contatti</a>
+        </p>
+    </div>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+</html>
